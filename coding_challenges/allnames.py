@@ -12,6 +12,13 @@ def unisex(allnames):
     boys = allnames.loc[allnames['sex'] == 'M']
     girls = allnames.loc[allnames['sex'] == 'F']
 
+    nboys = sum(boys['number'])
+    ngirls = sum(girls['number'])
+
+    ratio = nboys / ngirls
+    unisex = (ratio > 0.5) and (ratio < 0.2)
+
+    print(unisex)
     print(boys)
     print(girls)
 

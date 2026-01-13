@@ -10,5 +10,8 @@ def unisex(allnames):
     # Your code goes here.
     print(allnames)
     boys = allnames.loc[allnames['sex'] == 'M']
+    girls = allnames.loc[allnames['sex'] == 'F']
+
     print(boys)
+    print(girls)
 
